@@ -1,0 +1,27 @@
+Input files:
+	1. Input file is an excel sheet.
+		"SERCaMP_Library_Gene_List_with_mass_spec.xlsx" in present case.
+
+Steps to run the script.
+
+Steps:
+1a. on Biowulf:
+    getting an interactive node:
+	sinteractive --constraint=gpuk80 --gres=lscratch:10,gpu:k80:1
+
+1b. on Cragger:
+    log into a K80 GPU node (currently gpu-0-4)
+
+2. load singularity container:
+	module load singularity/2.4.6-local
+
+3. load tensorflow image file:
+	singularity shell --nv /state/partition1/users/rkverma/tf-manual.simg
+
+	manually set the CUDA devices tensorflow can see, using
+    		export CUDA_VISIBLE_DEVICES= 1 # any integer between 0 and 7 could be used if running code on cragger.
+4. run tail_response_rnn.ipynb ipython notebook.
+	ipython notebook contains several cells that needs xlrd or matplotlib modules to be installed in sigularity hence
+	you need to block them.
+
+

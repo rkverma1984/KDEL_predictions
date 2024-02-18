@@ -1,0 +1,16 @@
+code to extact data:
+    get_go_top_100_latest.py
+
+
+top predictions:
+
+all_top_100.xlsx
+all_top_100_unique.xlsx
+all_top_100_unique.xml (in xml format)
+
+
+bottom predictions:
+
+all_bottom_100.xlsx
+all_bottom_100_unique.xlsx
+all_bottom_100_unique.xml (in xml format)

@@ -1,0 +1,199 @@
+Input files:
+    1. Input file is an excel sheet.
+        "SERCaMP_Library_Gene_List_with_mass_spec.xlsx" in present case.
+
+    2. parameters file: in this case rnn_parameters.py. Parameters file consists of important parameters needed as
+       input for building the Recurrent Neural Network (RNN) model. Modify the parameters file as needed.
+
+            ### parameters needed for one hot encoding
+            aas: ** do not change order **
+
+            ### RNN parameters ######
+            random_seed: select a number
+            lstm_size: can be 16 32 64 128...
+                       used value = 64
+            lstm_layers: number of lstm layers to be used.
+                         used value = 1
+            batch_size = 1
+            learning_rate: used during calculation of new weights.
+                           Relation with new weights: new_weight = existing_weight — learning_rate * gradient
+                           can be 0.01, 0.001, 0.0001...
+                           used value = 0.001
+
+    3. path parameters file
+            modify following parameters in path_parameters_sample.py:
+
+
+            ### parameters for input_preparation script:
+            code_dir: path to the package directory.
+            meta_dir: path to raw_data directory.
+            checkpoint_store_dir: directory where checkpoints to be saved and read from
+            sequence_key: sequence header in the excel sheet.
+            response_key: header for the scores in the excel sheet.
+            input_excel: name of the input excel sheet. It should be present in working directory.
+            output_df:  output name for dataframe. It serves as input for rnn.py.
+            prediction_df: dataframe on which the prediction is to be performed.
+
+
+
+Steps to run the script.
+
+Steps:
+    Setting up the environment:
+        for Biowulf (requres that /share/apps/singularity-images/new-tf.simg be
+                     copied to your /data directory on biowulf)
+            1) get an interactive node
+               sinteractive --constraint=gpuk80 --gres=lscratch:10,gpu:k80:1
+
+            2) load the singularity module
+               module load singularity
+
+            3) start a singularity container
+               singularity shell --nv /data/username//new-tf.simg
+
+        for Cragger (no longer requires singularity)
+            1) log in to the designated gpu node (currently gpu-0-5)
+
+            2) load the tensorflow python environment
+               module load python/cuda-test
+
+4. run input_preparation.py.
+    USAGE: python3 input_preparation.py -p path_parameters_sample.py
+
+    Script process the excel sheet provided and stores the data in a dataframe.
+
+
+5. run rnn.py.
+    rnn.py is the core script to create, train, and test the model.
+
+    Input: Read output dataframe file generated using input_preparation.py. File name is defined as output_df in
+    path_parameters*.py file. See sample path file (path_parameters_sample.py). Parameters for constructing RNN are
+    described in rnn_parameters.py.
+
+    This is a machine learning script developed to create a model to predict "Tg Response".
+        workflow:
+            1. Read output dataframe file generated using input_preparation file.
+            2. Train and test the RNN model using 10:1 ratio of the data given.
+            3. Prediction of new sequences and their "Tg Response" values based on the model.
+            4. Save the trained model in checkpoints directory defined using -c flag in command line (see below).
+            5. Checkpoints are read again and sequences are filtered (a.a. that appears more than twice in the data).
+            6. Output is stored in filename defined by prediction_out_file_name variable in path_parameters*.py file.
+
+    It can be run using following two modes:
+
+    PARALLEL MODE:
+        1. first increase the no of processes available per user in the singularity shell.
+        using:
+            ulimit -u 2048
+
+
+        2. Use "python3 master.py -h" to see help menu
+
+            USAGE:
+                python3 master.py -p path_parameters_sample.py -r rnn_type -j jobtype -e epochs -c checkpoint_dir -i 8 -s 0 -t yes/no -a yes/no
+
+            PREFERRED USAGE:
+            to validate:
+                python3 master.py -p path_parameters_sample.py -r LSTM -j validation -e 3000 -c checkpoints -i 8 -s 0 -t no -a no
+            to score human proteome last 7
+                python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 8 -s 0 -t yes -a no
+            to derive artificial sequences
+                python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 8 -s 0 -t yes -a yes
+
+            OPTIONS:
+
+                -h or --help:	print help
+                -p or --pfile:	file with paths to input files. See path_parameters_sample.py
+                -r or --rnn:	use either GRU or LSTM
+                        DEFAULT: LSTM
+                -e or --epochs:	no of optimization iterations
+                        DEFAULT: 3000
+                -c or --ckdir:	name of checkpoint directory where checkpoints to be saved
+                        DEFAULT: checkpoints
+                -j or --jobtype: use prediction
+                        DEFAULT: prediction
+                        if jobtype== validation:	code performs cross validation
+                        if jobtype== prediction:	train on whole dataset and perform analysis
+                -i or --iteration: no of iterations to be performed
+                -s or --start_index: starting iteration
+                -t or  --training : if yes, do training
+                -a or  --artificial_sequences : if yes, do calculate atificial sequences and compute scores for them.
+
+                IMPORTANT CONSIDERATIONS:
+                    Use different checkpoint directory names while doing multiple runs.
+
+                WORKFLOW:
+                    master.py calls rnn.py multiple times and submit a single calculation on a given gpu
+
+
+    SERIAL MODE:
+
+        Use "python3 rnn.py -h" to see help menu
+
+            USAGE:
+                python3 rnn.py -p path_parameters_sample.py -r rnn_type -e epochs -j prediction -c checkpoint_dir -l log_file_name -g gpu_id -t yes/no -a yes/no
+
+            PREFERRED USAGE:
+                        to validate:
+                            python3 rnn.py -p path_parameters_sample.py -r LSTM -j validation -e 3000 -c checkpoints -i 1 -s 0 -t no -a no
+                        to score human proteome last 7
+                            python3 rnn.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 1 -s 0 -t yes -a no
+                        to derive artificial sequences
+                            python3 rnn.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 1 -s 0 -t yes -a yes
+            OPTIONS:
+
+                -h or --help:	print help
+                -r or --rnn:	use either GRU or LSTM
+                        DEFAULT: LSTM
+                -j or --jobtype: validation or prediction
+                        DEFAULT: prediction
+                -e or --epochs:	no of optimization iterations
+                        DEFAULT: 3000
+                -c or --ckdir:	name of checkpoint directory where checkpoints to be saved
+                        DEFAULT: checkpoints
+                -g or --gpu: id for the gpu:
+                            any integer between 0 and 7 could be used if running code on cragger.
+                            if using only CPU use -g ''
+                -t or  --training : if yes, do training
+                -a or  --artificial_sequences : if yes, do calculate atificial sequences and compute scores for them.
+
+            IMPORTANT CONSIDERATIONS:
+                Use different checkpoint directory names while doing multiple runs.
+
+
+6. run rank_and_comparison.py:
+    Use "python3 rank_and_comparison.py" -h to see help menu
+
+    USAGE:
+        python3 rank_and_comparison.py -o output_filename -i input_file1 -i input_file2 -i input_file3
+
+
+    OPTIONS:
+        -h or --help:	print help
+        -o or --ofile:	Output csv filename
+        -i or --ifile:	Input file names
+                If using multiple input files provide each of their name using
+                flag -i separately. see COMMAND LINE.
+
+
+    DESCRIPTION:
+
+        Script read the outputs from the rnn.py script saved as pickle (.pkl) and convert them to txt file.
+        File names are derived by replacing '.pkl' with '.txt'.
+        If a single file name is given, the prediction sequences are shorted and printed to the text file based on their score.
+        If more than one pickle file is given, the script will compare the sequence ranks in each of them and will provide an average ranks and scores.
+
+7. run bootstrapping.py:
+    usage:
+        python3 bootstrapping.py -r <no of bootstrap replicates> -b <bin size> -t <how many top sequences to be considered> -f <how many foot sequences to be considered>
+
+        example:
+            python3 bootstrapping.py -i 30 -b 3 -t 1000 -f 1000
+
+            workflow for the example command:
+                1. bootstrapping code would create 30 replicates of bin size 3,
+                   and calculate average rank and average score for each of them.
+                2. Top 100 sequences and/or foot 1000 sequences with the best or worst average Scores, respectively, would be selected for each replicate.
+                3. Perform pairwise comparison of sequences and identify the common set of sequences between a pair of replicates.
+                4. Calculate an average over all the replicates and will report it in the log file. 5. Also calculate the common sequences among all the replicates.
+

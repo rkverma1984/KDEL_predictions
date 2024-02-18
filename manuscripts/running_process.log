@@ -1,0 +1,90 @@
+main_work_dir='/home/bxie/PycharmProjects/KDEL/benchmark'
+
+###########################
+###### Validation  ########
+###########################
+
+1. BUILD NEW 32 MODELS BASED ON 95 TRAINGING DATASET
+
+work_dir = main_work_dir+'/'+'building_new_model/95_training_database_predict_89batch'
+
+#-----------------------------------------------------------------------------------------------------------------
+ a) Predict Second Batch dataset  (THIS WILL BE used in the MAIN MANUSCRIPT for validating models performance)
+#-----------------------------------------------------------------------------------------------------------------
+Training data:
+work_dir+'/raw_data/first_set_tail_response.df'
+
+Prediction data:
+work_dir+'/raw_data/second_set_SERCaMP_Response_Data.df'
+
+Running command:
+cd 95_training_database_predict_89batch/rnn_modular_package
+python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 32 -s 0 -t yes -a no
+
+#####################################
+###### Human Seq prediction  ########
+#####################################
+
+2. BUILD NEW 32 MODELS BASED ON 199 TRAINING DATASET
+
+work_dir = main_work_dir+'/'+'building_new_model/199_training_database'
+#-----------------------------------------------------------------------------------------------------------------
+  a) Predict GRCh38 Human Sequences  (This will NOT be used in the MAIN MANUSCRIPT because the dataset is old. )
+#-----------------------------------------------------------------------------------------------------------------
+Training data:
+work_dir+'/raw_data/full_dataset_199_exp.df'
+
+Prediction data:
+work_dir+'/raw_data/GRCh38_P12_unique_tails_protein_coding_usual_aa_processed_last7_human_proteome.df'
+
+Running command:
+cd 199_training_database/rnn_modular_package
+python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 32 -s 0 -t yes -a no
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+ b) Predict GRCh39 Human Sequences (THIS WILL BE used in the MAIN MANUSCRIPT for providing candidates to the experimental group )
+#-------------------------------------------------------------------------------------------------------------------------------------
+Training data:
+work_dir+'/raw_data/full_dataset_199_exp.df'
+
+Prediction data:
+work_dir+'/raw_data/GRCh39_unique_tails_protein_coding_usual_aa_processed_last7_human_proteome.df'
+
+Running command:
+cd 199_training_database/rnn_modular_package
+python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints -i 32 -s 0 -t no -a no           # Using GRCh38 prediction model
+
+##################################################
+###### Model Comparison (stochastic issue)########
+##################################################
+
+3. Using OLD 32 MODELS BUILT BY RAVI
+
+work_dir = main_work_dir +'/'+ 'using_old_model/199_training_database_batch1'
+#-----------------------------------------------------------------------------------------------------------------------
+  a) Predict GRCh38 Human Sequences (This will NOT be used in the MAIN MANUSCRIPT because the dataset is old. )
+#-----------------------------------------------------------------------------------------------------------------------
+Training data:
+Since using previous models, no further training were performed. These 32 models were based on full_dataset_199_exp.df dataset.
+
+Prediction data:
+work_dir+'/raw_data/unique_tails_protein_coding_usual_aa_processed_last7_human_proteome.df'
+
+Running command:
+cd 199_training_database_batch1/rnn_modular_package
+python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints_batch1 -i 32 -s 0 -t no -a no
+
+#-----------------------------------------------------------------------------------------------------------------------------
+  b) Predict GRCh39 Human Sequences(This will NOT be used in the MAIN MANUSCRIPT because it's only for testing stochastic. )
+#-----------------------------------------------------------------------------------------------------------------------------
+Training data:
+Since using previous models, no further training were performed. These 32 models were based on full_dataset_199_exp.df dataset.
+
+Prediction data:
+work_dir+'/raw_data/GRCh39_unique_tails_protein_coding_usual_aa_processed_last7_human_proteome.df'
+
+Running command:
+cd 199_training_database_batch1/rnn_modular_package
+python3 master.py -p path_parameters_sample.py -r LSTM -j prediction -e 3000 -c checkpoints_batch1 -i 32 -s 0 -t no -a no
+
+

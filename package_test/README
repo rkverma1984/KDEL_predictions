@@ -1,0 +1,7 @@
+see rnn_workflow_and_statistics.pptx file for workflow and statistics.
+
+comparison_two_trials_training_and_prediction:
+    compare_df_csv.ipynb: script compares top 100 predictions from two runs (training and prediction)
+                                                and compare them. common sequences will appear in read.
+
+    comparison_top100_average_RNN_score.csv: input file for compare_df_csv.ipynb script.

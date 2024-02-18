@@ -1,0 +1,546 @@
+Individual log File checkpoints_all_batches_corrected_0.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.003072103542981536  
+ Training end time 2018-09-22 23:07:28  
+ Training run time 31.47 minutes  
+ Prediction start time 2018-09-22 23:07:28  
+ Prediction end time 2018-09-22 23:08:09  
+ Prediction run time 0.68 minutes  
+  
+ Total run time 32.15 minutes  
+Individual log File checkpoints_all_batches_corrected_1.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:01  
+ MSE: 0.00376409668196787  
+ Training end time 2018-09-22 23:08:27  
+ Training run time 32.43 minutes  
+ Prediction start time 2018-09-22 23:08:27  
+ Prediction end time 2018-09-22 23:09:05  
+ Prediction run time 0.63 minutes  
+  
+ Total run time 33.07 minutes  
+Individual log File checkpoints_all_batches_corrected_10.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.00253495428850911  
+ Training end time 2018-09-22 23:41:39  
+ Training run time 30.92 minutes  
+ Prediction start time 2018-09-22 23:41:39  
+ Prediction end time 2018-09-22 23:42:22  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 31.63 minutes  
+Individual log File checkpoints_all_batches_corrected_11.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.0029946882620202836  
+ Training end time 2018-09-22 23:43:36  
+ Training run time 32.87 minutes  
+ Prediction start time 2018-09-22 23:43:36  
+ Prediction end time 2018-09-22 23:44:17  
+ Prediction run time 0.68 minutes  
+  
+ Total run time 33.55 minutes  
+Individual log File checkpoints_all_batches_corrected_12.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.004211150487766608  
+ Training end time 2018-09-22 23:41:34  
+ Training run time 30.83 minutes  
+ Prediction start time 2018-09-22 23:41:34  
+ Prediction end time 2018-09-22 23:42:17  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 31.55 minutes  
+Individual log File checkpoints_all_batches_corrected_13.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.002363442520119959  
+ Training end time 2018-09-22 23:43:05  
+ Training run time 32.35 minutes  
+ Prediction start time 2018-09-22 23:43:05  
+ Prediction end time 2018-09-22 23:43:44  
+ Prediction run time 0.65 minutes  
+  
+ Total run time 33.0 minutes  
+Individual log File checkpoints_all_batches_corrected_14.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.002788430099914045  
+ Training end time 2018-09-23 00:15:45  
+ Training run time 31.43 minutes  
+ Prediction start time 2018-09-23 00:15:45  
+ Prediction end time 2018-09-23 00:16:25  
+ Prediction run time 0.67 minutes  
+  
+ Total run time 32.1 minutes  
+Individual log File checkpoints_all_batches_corrected_15.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.0029949343181009573  
+ Training end time 2018-09-23 00:15:10  
+ Training run time 30.85 minutes  
+ Prediction start time 2018-09-23 00:15:10  
+ Prediction end time 2018-09-23 00:15:51  
+ Prediction run time 0.68 minutes  
+  
+ Total run time 31.53 minutes  
+Individual log File checkpoints_all_batches_corrected_16.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.003361041110764896  
+ Training end time 2018-09-23 00:19:42  
+ Training run time 35.38 minutes  
+ Prediction start time 2018-09-23 00:19:42  
+ Prediction end time 2018-09-23 00:20:35  
+ Prediction run time 0.88 minutes  
+  
+ Total run time 36.27 minutes  
+Individual log File checkpoints_all_batches_corrected_17.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.0031385381137685893  
+ Training end time 2018-09-23 00:15:51  
+ Training run time 31.53 minutes  
+ Prediction start time 2018-09-23 00:15:51  
+ Prediction end time 2018-09-23 00:16:34  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 32.25 minutes  
+Individual log File checkpoints_all_batches_corrected_18.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.0025113847315824766  
+ Training end time 2018-09-23 00:15:06  
+ Training run time 30.78 minutes  
+ Prediction start time 2018-09-23 00:15:06  
+ Prediction end time 2018-09-23 00:15:48  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 31.48 minutes  
+Individual log File checkpoints_all_batches_corrected_19.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.0021855572742201846  
+ Training end time 2018-09-23 00:15:03  
+ Training run time 30.73 minutes  
+ Prediction start time 2018-09-23 00:15:03  
+ Prediction end time 2018-09-23 00:15:46  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 31.45 minutes  
+Individual log File checkpoints_all_batches_corrected_2.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.0022985664946669157  
+ Training end time 2018-09-22 23:06:59  
+ Training run time 30.98 minutes  
+ Prediction start time 2018-09-22 23:06:59  
+ Prediction end time 2018-09-22 23:07:41  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 31.68 minutes  
+Individual log File checkpoints_all_batches_corrected_20.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:44:19  
+ MSE: 0.0024029834315276643  
+ Training end time 2018-09-23 00:15:46  
+ Training run time 31.45 minutes  
+ Prediction start time 2018-09-23 00:15:46  
+ Prediction end time 2018-09-23 00:16:26  
+ Prediction run time 0.67 minutes  
+  
+ Total run time 32.12 minutes  
+Individual log File checkpoints_all_batches_corrected_21.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.002221388954880019  
+ Training end time 2018-09-23 00:52:17  
+ Training run time 31.67 minutes  
+ Prediction start time 2018-09-23 00:52:17  
+ Prediction end time 2018-09-23 00:52:56  
+ Prediction run time 0.65 minutes  
+  
+ Total run time 32.32 minutes  
+Individual log File checkpoints_all_batches_corrected_22.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.002965567132760541  
+ Training end time 2018-09-23 00:52:36  
+ Training run time 31.98 minutes  
+ Prediction start time 2018-09-23 00:52:36  
+ Prediction end time 2018-09-23 00:53:15  
+ Prediction run time 0.65 minutes  
+  
+ Total run time 32.63 minutes  
+Individual log File checkpoints_all_batches_corrected_23.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.0027394876777524467  
+ Training end time 2018-09-23 00:51:22  
+ Training run time 30.75 minutes  
+ Prediction start time 2018-09-23 00:51:22  
+ Prediction end time 2018-09-23 00:52:04  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 31.45 minutes  
+Individual log File checkpoints_all_batches_corrected_24.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.002973426562421513  
+ Training end time 2018-09-23 00:51:38  
+ Training run time 31.02 minutes  
+ Prediction start time 2018-09-23 00:51:38  
+ Prediction end time 2018-09-23 00:52:20  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 31.72 minutes  
+Individual log File checkpoints_all_batches_corrected_25.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.0027159198832861576  
+ Training end time 2018-09-23 00:53:00  
+ Training run time 32.38 minutes  
+ Prediction start time 2018-09-23 00:53:00  
+ Prediction end time 2018-09-23 00:53:42  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 33.08 minutes  
+Individual log File checkpoints_all_batches_corrected_26.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.0020505286471141524  
+ Training end time 2018-09-23 00:51:27  
+ Training run time 30.83 minutes  
+ Prediction start time 2018-09-23 00:51:27  
+ Prediction end time 2018-09-23 00:52:10  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 31.55 minutes  
+Individual log File checkpoints_all_batches_corrected_27.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:20:37  
+ MSE: 0.0028233455885576216  
+ Training end time 2018-09-23 00:55:54  
+ Training run time 35.28 minutes  
+ Prediction start time 2018-09-23 00:55:54  
+ Prediction end time 2018-09-23 00:56:36  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 35.98 minutes  
+Individual log File checkpoints_all_batches_corrected_28.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:56:38  
+ MSE: 0.0027204853743222576  
+ Training end time 2018-09-23 01:25:13  
+ Training run time 28.58 minutes  
+ Prediction start time 2018-09-23 01:25:13  
+ Prediction end time 2018-09-23 01:25:51  
+ Prediction run time 0.63 minutes  
+  
+ Total run time 29.22 minutes  
+Individual log File checkpoints_all_batches_corrected_29.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:56:38  
+ MSE: 0.0035382085390567265  
+ Training end time 2018-09-23 01:25:35  
+ Training run time 28.95 minutes  
+ Prediction start time 2018-09-23 01:25:35  
+ Prediction end time 2018-09-23 01:26:14  
+ Prediction run time 0.65 minutes  
+  
+ Total run time 29.6 minutes  
+Individual log File checkpoints_all_batches_corrected_3.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.00334453521680745  
+ Training end time 2018-09-22 23:07:48  
+ Training run time 31.8 minutes  
+ Prediction start time 2018-09-22 23:07:48  
+ Prediction end time 2018-09-22 23:08:32  
+ Prediction run time 0.73 minutes  
+  
+ Total run time 32.53 minutes  
+Individual log File checkpoints_all_batches_corrected_30.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:56:38  
+ MSE: 0.0023851126729869066  
+ Training end time 2018-09-23 01:25:33  
+ Training run time 28.92 minutes  
+ Prediction start time 2018-09-23 01:25:33  
+ Prediction end time 2018-09-23 01:26:16  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 29.63 minutes  
+Individual log File checkpoints_all_batches_corrected_31.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-23 00:56:38  
+ MSE: 0.002403411250983333  
+ Training end time 2018-09-23 01:25:10  
+ Training run time 28.53 minutes  
+ Prediction start time 2018-09-23 01:25:10  
+ Prediction end time 2018-09-23 01:25:50  
+ Prediction run time 0.67 minutes  
+  
+ Total run time 29.2 minutes  
+Individual log File checkpoints_all_batches_corrected_4.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.002176312479779367  
+ Training end time 2018-09-22 23:06:43  
+ Training run time 30.72 minutes  
+ Prediction start time 2018-09-22 23:06:43  
+ Prediction end time 2018-09-22 23:07:26  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 31.43 minutes  
+Individual log File checkpoints_all_batches_corrected_5.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.0027822255181416144  
+ Training end time 2018-09-22 23:09:57  
+ Training run time 33.95 minutes  
+ Prediction start time 2018-09-22 23:09:57  
+ Prediction end time 2018-09-22 23:10:42  
+ Prediction run time 0.75 minutes  
+  
+ Total run time 34.7 minutes  
+Individual log File checkpoints_all_batches_corrected_6.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 22:36:00  
+ MSE: 0.0028313431845083787  
+ Training end time 2018-09-22 23:06:58  
+ Training run time 30.97 minutes  
+ Prediction start time 2018-09-22 23:06:58  
+ Prediction end time 2018-09-22 23:07:40  
+ Prediction run time 0.7 minutes  
+  
+ Total run time 31.67 minutes  
+Individual log File checkpoints_all_batches_corrected_7.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.0030781946777791564  
+ Training end time 2018-09-22 23:42:24  
+ Training run time 31.67 minutes  
+ Prediction start time 2018-09-22 23:42:24  
+ Prediction end time 2018-09-22 23:43:05  
+ Prediction run time 0.68 minutes  
+  
+ Total run time 32.35 minutes  
+Individual log File checkpoints_all_batches_corrected_8.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.0031765875538400374  
+ Training end time 2018-09-22 23:42:19  
+ Training run time 31.58 minutes  
+ Prediction start time 2018-09-22 23:42:19  
+ Prediction end time 2018-09-22 23:43:02  
+ Prediction run time 0.72 minutes  
+  
+ Total run time 32.3 minutes  
+Individual log File checkpoints_all_batches_corrected_9.log 
+ X length 199  
+ Y length 199  
+ batch_size 1  
+ X length prediction 31872  
+ Y length prediction 0  
+ batch_size prediction 1  
+ Prediction: 
+ Training start time 2018-09-22 23:10:44  
+ MSE: 0.0030085333460057235  
+ Training end time 2018-09-22 23:42:29  
+ Training run time 31.75 minutes  
+ Prediction start time 2018-09-22 23:42:29  
+ Prediction end time 2018-09-22 23:43:08  
+ Prediction run time 0.65 minutes  
+  
+ Total run time 32.4 minutes  
+
+Average iteration run time	 32.11 minutes

@@ -1,0 +1,16 @@
+X length 199 
+Y length 199 
+batch_size 1 
+X length prediction 31872 
+Y length prediction 0 
+batch_size prediction 1 
+Prediction:
+Training start time 2018-09-22 22:36:00 
+MSE: 0.003072103542981536 
+Training end time 2018-09-22 23:07:28 
+Training run time 31.47 minutes 
+Prediction start time 2018-09-22 23:07:28 
+Prediction end time 2018-09-22 23:08:09 
+Prediction run time 0.68 minutes 
+
+Total run time 32.15 minutes 
